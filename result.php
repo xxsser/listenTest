@@ -219,7 +219,7 @@
     <div class="screen" style="margin-bottom: -195px; padding-bottom: 195px;">
         <dl class="result">
             <dt>你的耳朵能辨识的最高频率</dt>
-            <dd>21000 HZ</dd>
+            <dd><?php echo $_GET['fen'] ?> HZ</dd>
             <dt class="mp3">相当于辨识 MP3 的质量</dt>
             <dd class="mp3">最多能分辨 320 kbps</dd>
         </dl>
