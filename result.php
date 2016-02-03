@@ -1,8 +1,29 @@
+<?php
+$fen = $_GET['fen'];
+$per = intval(($fen-10000)/367)+70;
+if($fen <= 13000){
+    $kbps = 112;
+    $cue = '你的听力好像已经没有过去那么好了，得注意保护了哟～';
+    $title = '我能听到'.($fen/1000).'kHz的声音，至少得听'.$kbps.'k的mp3，击败'.$per.'%的人【点我测试】';
+}else if($fen < 16000){
+    $kbps = 128;
+    $cue = '你不用担心你的听力，依然在正常范围内。';
+    $title = '我能听到'.($fen/1000).'kHz的声音，至少得听'.$kbps.'k的mp3，击败'.$per.'%的人【点我测试】';
+}else if($fen < 20000){
+    $kbps = 160;
+    $cue = '你的耳朵超出常人的辨识能力，当你听到了别人听不到的声音时，不必纠结，因为你的耳朵就是比他们的好。';
+    $title = '我能听到'.($fen/1000).'kHz的声音，至少得听'.$kbps.'k的mp3，击败'.$per.'%的人【点我测试】';
+}else{
+    $kbps = 320;
+    $cue = '俗称的“金耳朵” 大概指的就是你这种，辨识度已经达到了 MP3 的上限， 也许只有无损音质才配得上你的耳朵。';
+    $title = '我能听到'.($fen/1000).'kHz的声音，无损音频才对得起我耳朵，击败了'.$per.'%的人【点我测试】';
+}
+?>
 <!DOCTYPE html>
 <html class="mobile">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>我能听到21kHz的声音，无损音频才对得起我耳朵，几乎击败所有人【点我测试】 | 吉他大师</title>
+    <title><?php echo $title?></title>
     <script type="text/javascript" src="./js/f47a205ec3"></script>
     <script src="./js/nr-852.min.js"></script>
     <script async="" src="./js/analytics.js"></script>
@@ -221,19 +242,15 @@
             <dt>你的耳朵能辨识的最高频率</dt>
             <dd><?php echo $_GET['fen'] ?> HZ</dd>
             <dt class="mp3">相当于辨识 MP3 的质量</dt>
-            <dd class="mp3">最多能分辨 320 kbps</dd>
+            <dd class="mp3">最多能分辨 <?php echo $kbps?> kbps</dd>
         </dl>
         <div class="comparison">
-            <div class="comparison-content">击败了<span class="percentage">99%</span><span class="desc">的测试者</span></div>
+            <div class="comparison-content">击败了<span class="percentage"><?php echo $per?>%</span><span class="desc">的测试者</span></div>
             <div id="bar">
-                <div class="filled" data-percentage="99%" style="width: 99%;"></div>
+                <div class="filled" data-percentage="<?php echo $per?>%" style="width: 99%;"></div>
             </div>
         </div>
-        <p class="conclusion">俗称的“金耳朵” 大概指的就是你这种，辨识度已经达到了 MP3 的上限， 也许只有无损音质才配得上你的耳朵。</p><a class="button"
-                                                                                           data-report="report.html"
-                                                                                           data-title="我能听到21kHz的声音，无损音频才对得起我耳朵，几乎击败所有人【点我测试】"
-                                                                                           href="javascript:;"
-                                                                                           id="button-share">晒成绩，查看详细报告</a>
+        <p class="conclusion"><?php echo $cue?></p><a class="button" data-report="report.html" data-title="<?php echo $title?>" href="javascript:;" id="button-share">晒成绩，查看详细报告</a>
     </div>
     <a class="app_banner" href="https://jita.im/apps/eumgm/get?ref=hearing_test%2Fdone" target="_blank"><img
             src="./image/app_banner2.jpg"
