@@ -1,3 +1,4 @@
+<?php include 'init.php'; ?>
 <!DOCTYPE html>
 <html class="mobile">
 <head>
@@ -227,10 +228,10 @@
                                                           href="play.html">开始测试</a>
         <p class="participant"><span class="count">2456029</span>已参加测试</p></div>
     <script>eum.config || (eum.config = {});
-    eum.config.appid = "wx7fddbfc5de068648"
-    eum.config.ts = "1454078269"
-    eum.config.nonce = "w4HS+R4SQ/Ndv6bgVEyjQQ=="
-    eum.config.signature = "5aee9d84aff4c92a7fa88531148e94bed0ac87f0"</script>
+    eum.config.appid = "<?php echo $jsbag['appId']?>"
+    eum.config.ts = "<?php echo $jsbag['timestamp']?>"
+    eum.config.nonce = "<?php echo $jsbag['nonceStr']?>"
+    eum.config.signature = "<?php echo $jsbag['nonceStr']?>"</script>
     <script>jQuery(function ($) {
         if ('function' !== typeof ga) return;
         ga('send', 'event', 'Game', 'ready', 'Hearing');

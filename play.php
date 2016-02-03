@@ -1,5 +1,5 @@
+<?php include 'init.php'; ?>
 <!DOCTYPE html>
-<!-- saved from url=(0046)https://jita.im/wechat/games/hearing_test/play -->
 <html class="mobile">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -266,10 +266,10 @@
                __idm_id__="572417"></audio>
         <p class="debug"></p></div>
     <script>eum.config || (eum.config = {});
-    eum.config.appid = "wx7fddbfc5de068648"
-    eum.config.ts = "1454077392"
-    eum.config.nonce = "JiskQqwgnqBkIam9GwYkWA=="
-    eum.config.signature = "9d8b978519da42db5d83671135c7876a8c2796ff"</script>
+        eum.config.appid = "<?php echo $jsbag['appId']?>"
+        eum.config.ts = "<?php echo $jsbag['timestamp']?>"
+        eum.config.nonce = "<?php echo $jsbag['nonceStr']?>"
+        eum.config.signature = "<?php echo $jsbag['nonceStr']?>"</script>
     <script>jQuery(function ($) {
         if ('function' !== typeof ga) return;
         ga('send', 'event', 'Game', 'play', 'Hearing');

@@ -1,3 +1,4 @@
+<?php include 'init.php'; ?>
 <!DOCTYPE html>
 <html class="mobile">
 <head>
@@ -252,10 +253,10 @@
         <p class="or">或者</p><a class="button button-primary"
                                href="play.html">再测一次</a></div>
     <script>eum.config || (eum.config = {});
-    eum.config.appid = "wx7fddbfc5de068648"
-    eum.config.ts = "1454078127"
-    eum.config.nonce = "uo3NyrToAfMIRB+KPagFGw=="
-    eum.config.signature = "9a601cdc72e967e1009623109256ca8a78317393"</script>
+        eum.config.appid = "<?php echo $jsbag['appId']?>"
+        eum.config.ts = "<?php echo $jsbag['timestamp']?>"
+        eum.config.nonce = "<?php echo $jsbag['nonceStr']?>"
+        eum.config.signature = "<?php echo $jsbag['nonceStr']?>"</script>
     <script>jQuery(function ($) {
         if ('function' !== typeof ga) return;
 

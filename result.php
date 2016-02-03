@@ -1,4 +1,5 @@
 <?php
+include 'init.php';
 $fen = $_GET['fen'];
 $per = intval(($fen-10000)/367)+70;
 if($fen <= 13000){
@@ -266,10 +267,10 @@ if($fen <= 13000){
                 src="./image/app_banner2.jpg"
                 alt="App banner2 b3e14cbe821944ce9321255806e4c58c2e2d1487c8f00e1e10ee6a76877d06c7"></a></div>
     <script>eum.config || (eum.config = {});
-    eum.config.appid = "wx7fddbfc5de068648"
-    eum.config.ts = "1454077847"
-    eum.config.nonce = "nLZ+Y66YNZf92SuAi8b0Xg=="
-    eum.config.signature = "b45e3f41a66ca8572aaef0530259e41856f4809c"</script>
+        eum.config.appid = "<?php echo $jsbag['appId']?>"
+        eum.config.ts = "<?php echo $jsbag['timestamp']?>"
+        eum.config.nonce = "<?php echo $jsbag['nonceStr']?>"
+        eum.config.signature = "<?php echo $jsbag['nonceStr']?>"</script>
     <script>jQuery(function ($) {
         if ('function' !== typeof ga) return;
 
