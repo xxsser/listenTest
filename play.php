@@ -23,7 +23,7 @@
         gon.variant = ["phone"];
         gon.logined = true;
         gon.is_signed_in = true;
-        gon.moment_title = "\u636e\u8bf425\u5c81\u4ee5\u4e0a\u5c31\u542c\u4e0d\u5230\u8fd9\u4e9b\u58f0\u97f3\u4e86\uff0c\u5feb\u6765\u6d4b\u8bd5\u4e00\u4e0b\u8033\u6735\u542c\u529b\u5427\u3002";
+        gon.moment_title = "\u636e\u8bf4\u5c81\u4ee5\u4e0a\u5c31\u542c\u4e0d\u5230\u8fd9\u4e9b\u58f0\u97f3\u4e86\uff0c\u5feb\u6765\u6d4b\u8bd5\u4e00\u4e0b\u8033\u6735\u542c\u529b\u5427\u3002";
         gon.moment_uri = "http:\/\/dianying.zggzngw.com";
         gon.moment_icon = "http:\/\/dianying.zggzngw.com\/image\/ic_moments.png";
         gon.audioPathes = {
@@ -68,10 +68,8 @@
         </div>
         <p class="advice">为了结果更准确，建议测试时使用耳机<br>并且请调整音量，以免音量过高</p>
         <div class="play-buttons play-buttons-3"><a class="play-button" data-index="0" href="javascript:;"><span
-                class="btn">播放</span><span class="order">1</span></a><a class="play-button" data-index="1"
-                                                                        href="javascript:;"><span
-                class="btn">播放</span><span class="order">2</span></a><a class="play-button" data-index="2"
-                                                                        href="javascript:;"><span
+                class="btn">播放</span><span class="order">1</span></a><a class="play-button" data-index="1" href="javascript:;"><span
+                class="btn">播放</span><span class="order">2</span></a><a class="play-button" data-index="2" href="javascript:;"><span
                 class="btn">播放</span><span class="order">3</span></a></div>
         <ul class="choices choices-3" data-url="testDone.php">
             <li><a class="button" data-index="0" href="javascript:;">1 有声音</a></li>
@@ -79,7 +77,7 @@
             <li><a class="button" data-index="2" href="javascript:;">3 有声音</a></li>
             <li><a class="button button-inverse" data-index="-1" href="javascript:;">听不到这题</a></li>
         </ul>
-        <audio id="audio" src="voice/10000.mp3" __idm_id__="572417"></audio>
+        <audio id="audio" src="voice/10000.mp3" ></audio>
         <p class="debug"></p></div>
     <script>eum.config || (eum.config = {});
         eum.config.appid = "<?php echo $jsbag['appId']?>"
